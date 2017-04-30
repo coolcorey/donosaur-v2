@@ -1,0 +1,190 @@
+key,desc,where,type,length
+elf,E-file indicator,n/a,Char,1
+ein,Employer Identification Number,"Form 990-PF, Item A",Num,9
+tax_prd,Tax period (YYYYMM format),Top of form,Char,6
+eostatus,EO Status Code,n/a (IRS-Coded),Char,2
+tax_yr,SOI Year,990-PF Header,Num,4
+operatingcd,Operating foundation code,n/a (IRS-Coded),Char,1
+subcd,Subsection code,n/a (IRS-Coded),Char,2
+fairmrktvalamt,Total assets – e-o-y fair market value ,"990-PF Header, Item I",Num,15
+grscontrgifts,Contributions received,"990-PF Pt I Line 1, col (a)",Num,15
+schedbind,Schedule B indicator,n/a (IRS-Coded based on presence of Schedule B contributor information),Char,1
+intrstrvnue,Interest revenue,"990-PF Pt I Line 3, col (a)",Num,15
+dividndsamt,Dividends,"990-PF Pt I Line 4, col (a)",Num,15
+grsrents,Gross rents,"990-PF Pt I-5a, col (a)",Num,15
+grsslspramt,Gross sales price for assets ,990-PF Pt I-6b,Num,15
+costsold,Cost-of-goods-sold,990-PF Pt I-10b,Num,15
+grsprofitbus,Gross profit,"990-PF Pt I-10c, col (a)",Num,15
+otherincamt,Other income,"990-PF Pt I-11, col (a)",Num,15
+totrcptperbks,Total revenue,"990-PF Pt I-12, col (a)",Num,15
+compofficers,Compensation of officers,"990-PF Pt I-13, col (a)",Num,15
+pensplemplbenf,"Pension plans, employee benefits ","990-PF Pt I-15, col (a)",Num,15
+legalfeesamt,Legal fees,"990-PF Pt I-16a, col (a)",Num,15
+accountingfees,Accounting fees,"990-PF Pt I-16b, col (a)",Num,15
+interestamt,Interest,"990-PF Pt I-17, col (a)",Num,15
+depreciationamt,Depreciation and depletion,"990-PF Pt I-19, col (a)",Num,15
+occupancyamt,Occupancy,"990-PF Pt I-20, col (a)",Num,15
+travlconfmtngs,"Travel, conferences, and meetings","990-PF Pt I-21, col (a)",Num,15
+printingpubl,Printing and publications,"990-PF Pt I-22, col (a)",Num,15
+topradmnexpnsa,Total operating and administrative expenses column a ,"990-PF Pt I-24, col (a)",Num,15
+contrpdpbks,"Contributions, gifts, grants paid","990-PF Pt I-25, col (a)",Num,15
+totexpnspbks,Total expenses,"990-PF Pt I-26, col (a)",Num,15
+excessrcpts,Net income less deficit,990-PF Pt I-27a,Num,15
+totrcptnetinc,Total receipts net investment income,"990-PF Pt I-12, col (b)",Num,15
+topradmnexpnsb,Total operating and administrative expenses column b ,"990-PF Pt I-24, col (b)",Num,15
+totexpnsnetinc,Total expenses net investment income,"990-PF Pt I-26, col (b)",Num,15
+netinvstinc,Net investment income,990-PF Pt I-27b,Num,15
+trcptadjnetinc,Total receipts adjusted net income,"990-PF Pt I-12, col (c)",Num,15
+totexpnsadjnet,Total expenses adjusted net income,"990-PF Pt I-26, col (c)",Num,15
+adjnetinc,Adjusted net income,990-PF Pt I-27c,Num,15
+topradmnexpnsd,Total operating and administrative expenses column d,"990-PF Pt I-24, col (d)",Num,15
+totexpnsexempt,Total expenses – exempt purpose,"990-PF Pt I-26, col (d)",Num,15
+othrcashamt,Cash non-interest-bearing – e-o-y book value,"990-PF Pt II-1, col (b)",Num,15
+invstgovtoblig,Investments in U.S. & state government obligations – e-o-y book value,"990-PF Pt II-10a, col (b)",Num,15
+invstcorpstk,Investments in corporate stock – e-o-y book value,"990-PF Pt II-10b, col (b)",Num,15
+invstcorpbnd,Investments in corporate bonds– e-o-y book value,"990-PF Pt II-10c, col (b)",Num,15
+totinvstsec,Total investments in securities – e-o-y book value,"990-PF Pt II, Lines 10a+10b+10c, col (b)",Num,15
+mrtgloans,Investments mortgage loans – e-o-y book value,"990-PF Pt II-12, col (b)",Num,15
+othrinvstend,Other investments – e-o-y book value,"990-PF Pt II-13, col (b)",Num,15
+othrassetseoy,Other assets – e-o-y book value,"990-PF Pt II-15, col (b)",Num,15
+totassetsend,Total assets – e-o-y book value,"990-PF Pt II-16, col (b)",Num,15
+mrtgnotespay,Mortgage loans payable – e-o-y book value,"990-PF Pt II-21, col (b)",Num,15
+othrliabltseoy,Other liabilities – e-o-y book value,"990-PF Pt II-22, col (b)",Num,15
+totliabend,Total liabilities – e-o-y book value,"990-PF Pt II-23, col (b)",Num,15
+tfundnworth,Total fund net worth – e-o-y book value,"990-PF Pt II-31, col (b)",Num,15
+fairmrktvaleoy,Total assets – e-o-y fair market value ,"990-PF Pt II-16, col (c)",Num,15
+totexcapgnls,Capital gain net income,990-PF Pt IV-2,Num,15
+totexcapgn,Net gain – sales of assets,990-PF Part IV-2 > 0,Num,15
+totexcapls,Net loss – sales of assets,990-PF Part IV-2 < 0,Num,15
+invstexcisetx,Excise tax on net investment income,990-PF Pt VI-1,Num,15
+sec4940notxcd,Section 4940 – no tax,990-PF Pt VI-1b not checked,Num,1
+sec4940redtxcd,Section 4940 – 1 % tax,990-PF Pt VI-1b checked,Num,1
+sect511tx,Section 511 tax,990-PF Pt VI-2,Num,15
+subtitleatx,Subtitle A tax,990-PF Pt VI-4,Num,15
+totaxpyr,Total excise tax,990-PF Pt VI-5,Num,15
+esttaxcr,Estimated tax credit,990-PF Pt VI-6a,Num,15
+txwithldsrc,Tax withheld at source,990-PF Pt VI-6b,Num,15
+txpaidf2758,Tax paid with Form 2758 (filing extension),990-PF Pt VI-6c,Num,15
+erronbkupwthld,Erroneous backup withholding credit amount,990-PF Pt VI-6d,Num,15
+estpnlty,Estimated tax penalty,990-PF Pt VI-8,Num,15
+taxdue,Tax due ,990-PF Pt VI-9 ,Num,15
+overpay,Overpayment,990-PF Pt VI-10 ,Num,15
+crelamt,Credit elect amount,990-PF Pt VI-11,Num,15
+infleg,Influence legislation?,990-PF Pt VII-A-1a,Char,1
+actnotpr,Activities not previously reported?,990-PF Pt VII-A-2,Char,1
+chgnprvrptcd,Changes not previously reported?,990-PF Pt VII-A-3,Char,1
+filedf990tcd,Filed 990-T?,990-PF Pt VII-A-4b,Char,1
+contractncd,Contraction?,990-PF Pt VII-A-5,Char,1
+furnishcpycd,Furnished copy to Attorney General?,990-PF Pt VII-A-8b,Char,1
+claimstatcd,Claiming status?,990-PF Pt VII-A-9,Char,1
+cntrbtrstxyrcd,Substantial contributors?,990-PF Pt VII-A-10,Char,1
+distribdafcd,Distribution to donor advised fund with advisory privileges?,990-PF Pt VII-A-12,Char,1
+orgcmplypubcd,Comply with public inspection?,990-PF Pt VII-A-13,Char,1
+filedlf1041ind,Section 4947(a)(1) filing in lieu of Form 1041?,990-PF Pt VII-A-15,Char,1
+propexchcd,Property exchange?,990-PF Pt VII-B-1a(1),Char,1
+brwlndmnycd,Borrow lend money?,990-PF Pt VII-B-1a(2),Char,1
+furngoodscd,Furnished goods?,990-PF Pt VII-B-1a(3),Char,1
+paidcmpncd,Paid compensation?,990-PF Pt VII-B-1a(4),Char,1
+transfercd,Transfer?,990-PF Pt VII-B-1a(5),Char,1
+agremkpaycd,Agree to make pay?,990-PF Pt VII-B-1a(6),Char,1
+exceptactsind,Acts fail to qualify under section 53.4941(d)-3?,990-PF Pt VII-B-1b,Char,1
+prioractvcd,Engage in acts in prior year?,990-PF Pt VII-B-1c,Char,1
+undistrinccd,Undistributed income?,990-PF Pt VII-B-2a,Char,1
+applyprovind,Not applying section 4942(a)(2) provisions?,990-PF Pt VII-B-2b,Char,1
+dirindirintcd,Direct indirect interest?,990-PF Pt VII-B-3a,Char,1
+excesshldcd,Excess business holdings?,990-PF Pt VII-B-3b,Char,1
+invstjexmptcd,Jeopardizing investments?,990-PF Pt VII-B-4a,Char,1
+prevjexmptcd,Prior year jeopardizing investments?,990-PF Pt VII-B-4b,Char,1
+propgndacd,Propaganda?,990-PF Pt VII-B-5a(1),Char,1
+ipubelectcd,Influence public election?,990-PF Pt VII-B-5a(2),Char,1
+grntindivcd,Grant individual?,990-PF Pt VII-B-5a(3),Char,1
+nchrtygrntcd,Non-charity grant?,990-PF Pt VII-B-5a(4),Char,1
+nreligiouscd,Non-religious?,990-PF Pt VII-B-5a(5),Char,1
+excptransind,Transactions fail to qualify under section 53.4945?,990-PF Pt VII-B-5b,Char,1
+rfprsnlbnftind,Receive funds to pay premiums on personal benefit contract?,990-PF Pt VII-B-6a,Char,1
+pyprsnlbnftind,Pay premiums on personal benefit contract?,990-PF Pt VII-B-6b,Char,1
+tfairmrktunuse,Fair market value of assets not used for charitable purposes ,990-PF Pt X-1d,Num,15
+valncharitassets,Net value of noncharitable-use assets,990-PF Pt X-5,Num,15
+cmpmininvstret,Minimum investment return,990-PF Pt X-6,Num,15
+distribamt,Distributable amount,990-PF Pt XI-7,Num,15
+undistribincyr,Undistributed income,"990-PF Pt XIII-6f, col (d)",Num,15
+adjnetinccola,Adjusted net income column a,"990-PF Pt XIV-2a, col (a)",Num,15
+adjnetinccolb,Adjusted net income column b,"990-PF Pt XIV-2a, col (b)",Num,15
+adjnetinccolc,Adjusted net income column c,"990-PF Pt XIV-2a, col (c)",Num,15
+adjnetinccold,Adjusted net income column d,"990-PF Pt XIV-2a, col (d)",Num,15
+adjnetinctot,Adjusted net income total,"990-PF Pt XIV-2a, col (e)",Num,15
+qlfydistriba,Qualifying distributions column a,"990-PF Pt XIV-2e, col (a)",Num,15
+qlfydistribb,Qualifying distributions column b,"990-PF Pt XIV-2e, col (b)",Num,15
+qlfydistribc,Qualifying distributions column c,"990-PF Pt XIV-2e, col (c)",Num,15
+qlfydistribd,Qualifying distributions column d,"990-PF Pt XIV-2e, col (d)",Num,15
+qlfydistribtot,Qualifying distributions total,"990-PF Pt XIV-2e, col (e)",Num,15
+valassetscola,Value assets column a,"990-PF Pt XIV-3a(1), col (a)",Num,15
+valassetscolb,Value assets column b,"990-PF Pt XIV-3a(1), col (b)",Num,15
+valassetscolc,Value assets column c,"990-PF Pt XIV-3a(1), col (c)",Num,15
+valassetscold,Value assets column d,"990-PF Pt XIV-3a(1), col (d)",Num,15
+valassetstot,Value assets total,"990-PF Pt XIV-3a(1), col (e)",Num,15
+qlfyasseta,Qualifying assets column a,"990-PF Pt XIV-3a(2), col (a)",Num,15
+qlfyassetb,Qualifying assets column b,"990-PF Pt XIV-3a(2), col (b)",Num,15
+qlfyassetc,Qualifying assets column c,"990-PF Pt XIV-3a(2), col (c)",Num,15
+qlfyassetd,Qualifying assets column d,"990-PF Pt XIV-3a(2), col (d)",Num,15
+qlfyassettot,Qualifying assets total,"990-PF Pt XIV-3a(2), col (e)",Num,15
+endwmntscola,Endowments column a,"990-PF Pt XIV-3b, col (a)",Num,15
+endwmntscolb,Endowments column b,"990-PF Pt XIV-3b, col (b)",Num,15
+endwmntscolc,Endowments column c,"990-PF Pt XIV-3b, col (c)",Num,15
+endwmntscold,Endowments column d,"990-PF Pt XIV-3b, col (d)",Num,15
+endwmntstot,Endowments total,"990-PF Pt XIV-3b, col (e)",Num,15
+totsuprtcola,Total support column a,"990-PF Pt XIV-3c(1), col (a)",Num,15
+totsuprtcolb,Total support column b,"990-PF Pt XIV-3c(1), col (b)",Num,15
+totsuprtcolc,Total support column c,"990-PF Pt XIV-3c(1), col (c)",Num,15
+totsuprtcold,Total support column d,"990-PF Pt XIV-3c(1), col (d)",Num,15
+totsuprttot,Total support total,"990-PF Pt XIV-3c(1), col (e)",Num,15
+pubsuprtcola,Public support column a,"990-PF Pt XIV-3c(2), col (a)",Num,15
+pubsuprtcolb,Public support column b,"990-PF Pt XIV-3c(2), col (b)",Num,15
+pubsuprtcolc,Public support column c,"990-PF Pt XIV-3c(2), col (c)",Num,15
+pubsuprtcold,Public support column d,"990-PF Pt XIV-3c(2), col (d)",Num,15
+pubsuprttot,Public support total,"990-PF Pt XIV-3c(2), col (e)",Num,15
+grsinvstinca,Gross investment income column a,"990-PF Pt XIV-3c(4), col (a)",Num,15
+grsinvstincb,Gross investment income column b,"990-PF Pt XIV-3c(4), col (b)",Num,15
+grsinvstincc,Gross investment income column c,"990-PF Pt XIV-3c(4), col (c)",Num,15
+grsinvstincd,Gross investment income column d,"990-PF Pt XIV-3c(4), col (d)",Num,15
+grsinvstinctot,Gross investment income total,"990-PF Pt XIV-3c(4), col (e)",Num,15
+grntapprvfut,Grants approved for future payment,990-PF Pt XV-3b,Num,15
+progsrvcacold,Program service revenue line 1a (excluded),"990-PF Pt XVI-A-1a, col (d)",Num,15
+progsrvcacole,Program service revenue line 1a (exempt),"990-PF Pt XVI-A-1a, col (e)",Num,15
+progsrvcbcold,Program service revenue line 1b (excluded),"990-PF Pt XVI-A-1b, col (d)",Num,15
+progsrvcbcole,Program service revenue line 1b (exempt),"990-PF Pt XVI-A-1b, col (e)",Num,15
+progsrvcccold,Program service revenue line 1c (excluded),"990-PF Pt XVI-A-1c, col (d)",Num,15
+progsrvcccole,Program service revenue line 1c (exempt),"990-PF Pt XVI-A-1c, col (e)",Num,15
+progsrvcdcold,Program service revenue line 1d (excluded),"990-PF Pt XVI-A-1d, col (d)",Num,15
+progsrvcdcole,Program service revenue line 1d (exempt),"990-PF Pt XVI-A-1d, col (e)",Num,15
+progsrvcecold,Program service revenue line 1e (excluded),"990-PF Pt XVI-A-1e, col (d)",Num,15
+progsrvcecole,Program service revenue line 1e (exempt),"990-PF Pt XVI-A-1e, col (e)",Num,15
+progsrvcfcold,Program service revenue line 1f (excluded),"990-PF Pt XVI-A-1f, col (d)",Num,15
+progsrvcfcole,Program service revenue line 1f (exempt),"990-PF Pt XVI-A-1f, col (e)",Num,15
+progsrvcgcold,Program service revenue--fees and contracts from government line 1g (excluded),"990-PF Pt XVI-A-1g, col (d)",Num,15
+progsrvcgcole,Program service revenue--fees and contracts from government line 1g (exempt),"990-PF Pt XVI-A-1g, col (e)",Num,15
+membershpduesd,Membership dues and assessments (excluded),"990-PF Pt XVI-A-2, col (d)",Num,15
+membershpduese,Membership dues and assessments (exempt),"990-PF Pt XVI-A-2, col (e)",Num,15
+intonsvngsd,Interest on savings and temporary cash investments (excluded),"990-PF Pt XVI-A-3, col (d)",Num,15
+intonsvngse,Interest on savings and temporary cash investments (exempt),"990-PF Pt XVI-A-3, col (e)",Num,15
+dvdndsintd,Dividends and interest from securities (excluded),"990-PF Pt XVI-A-4, col (d)",Num,15
+dvdndsinte,Dividends and interest from securities (exempt),"990-PF Pt XVI-A-4, col (e)",Num,15
+trnsfrcashcd,Transfer cash to noncharitable exempt organization?,990-PF Pt XVII-1a(1),Char,1
+trnsothasstscd,Transfer other assets to noncharitable exempt organization?,990-PF Pt XVII-1a(2),Char,1
+salesasstscd,Sale of assets to noncharitable exempt organization?,990-PF Pt XVII-1b(1),Char,1
+prchsasstscd,Purchase of assets from noncharitable exempt organization?,990-PF Pt XVII-1b(2),Char,1
+rentlsfacltscd,Rental of facilities or other assets?,990-PF Pt XVII-1b(3),Char,1
+reimbrsmntscd,Reimbursements arrangements?,990-PF Pt XVII-1b(4),Char,1
+loansguarcd,Loans or other guarantees?,990-PF Pt XVII-1b(5),Char,1
+perfservicescd,Performance of services or membership or fundraising solicitations?,990-PF Pt XVII-1b(6),Char,1
+sharngasstscd,"Sharing of facilities, equipment, mailing lists, other assets, or paid employees?",990-PF Pt XVII-1c,Char,1
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
