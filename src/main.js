@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Meta from 'vue-meta'
 import Raphael from 'raphael/raphael'
 global.Raphael = Raphael
 
@@ -10,6 +11,7 @@ import { taxDescription } from './constants'
 
 import VueMasonryPlugin from 'vue-masonry'
 Vue.use(VueMasonryPlugin)
+Vue.use(Meta)
 
 Vue.config.productionTip = false
 

@@ -3,7 +3,7 @@
     <nav class="ui fixed menu">
       <div class="ui container">
         <a href="#" class="header item">
-          <img class="logo" src="./assets/logo.png">
+          <img class="logo" src="./assets/logo.png" alt="logo">
         </a>
         <div class="right menu">
           <router-link to="/" class="item nav_item">Home</router-link>

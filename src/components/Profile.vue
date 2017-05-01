@@ -25,7 +25,7 @@
           </h4>
           <div class="ui raised segment" style="padding:0px;">
             <LocationMap
-              :meta="metaData"
+            :meta="metaData"
             />
           </div>
         </div>
@@ -74,9 +74,6 @@
 
       </div>
     </div>
-
-
-
 
     <div class="widget-margin">
       <h4 class="ui horizontal divider header inverted">
@@ -139,6 +136,31 @@ export default {
       ein: this.$route.params.ein,
       loading: false,
       shareOpen: false
+    }
+  },
+  metaInfo() {
+    return {
+      title: 'Donosaur',
+      htmlAttrs: {
+        lang: 'en'
+      },
+      meta: [
+        {
+          charset: 'utf-8'
+        },
+        {
+          name: 'og:url',
+          content: 'http://donosaur.org/#/profile/' + this.ein
+        },
+        {
+          name: 'og:title',
+          content: this.metaData ? this.metaData.NAME : ''
+        },
+        {
+          name: 'og:image',
+          content: 'http://donosaur.org/logo/logo.png'
+        }
+      ]
     }
   },
   methods: {

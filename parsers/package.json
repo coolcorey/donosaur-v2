@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "csv-parser": "^1.11.0"
+    "csv-parser": "^1.11.0",
+    "vue-meta": "^0.5.6"
   }
 }
