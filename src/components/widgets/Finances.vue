@@ -7,18 +7,13 @@
       xkey="year"
       ykeys='[ "income", "expense", "asset", "liability" ]'
       labels='["Income", "Expense", "Asset", "Liability"]'
-      line-colors='[ "#00A1D4", "#00FFB1", "#FF4C40", "#CC1447" ]'
+      line-colors='[ "#00A1D4", "#18AB7E", "#FF4C40", "#CC1447" ]'
       grid="true"
       event-stroke-width="5"
       resize="true"
       preUnits="$"
       xLabels="year"
     />
-
-  <!--
-  grid-text-weight="bold"
-  events='[ "2015" ]'
-  -->
 </div>
 
 </template>

@@ -87,6 +87,30 @@
       </div>
     </div>
 
+    <div class="widget-margin">
+      <h4 class="ui horizontal divider header inverted">
+        <i class="line chart icon"></i>
+        Employee Data
+      </h4>
+      <div class="ui raised segment">
+        <Employees
+        :tax="taxData"
+        />
+      </div>
+    </div>
+
+    <div class="widget-margin">
+      <h4 class="ui horizontal divider header inverted">
+        <i class="line chart icon"></i>
+        Fact Sheet
+      </h4>
+      <div class="ui raised segment">
+        <FactSheet
+        :tax="taxData"
+        />
+      </div>
+    </div>
+
     <div v-for="(data, year) in taxData">
       <div v-for="obj in data" class="widget-margin">
         <h4 class="ui horizontal divider header inverted">
@@ -120,6 +144,8 @@ import LocationMap from './widgets/LocationMap'
 import Finances from './widgets/Finances'
 import FinancesRevenue from './widgets/FinancesRevenue'
 import FinancesExpense from './widgets/FinancesExpense'
+import FactSheet from './widgets/FactSheet'
+import Employees from './widgets/Employees'
 
 export default {
   components: {
@@ -129,7 +155,9 @@ export default {
     LocationMap,
     Finances,
     FinancesRevenue,
-    FinancesExpense
+    FinancesExpense,
+    FactSheet,
+    Employees
   },
   data() {
     return {
@@ -207,6 +235,14 @@ export default {
 
 .widget-margin {
   margin-top: 35px;
+}
+
+.morris-hover.morris-default-style {
+  text-align: start
+}
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+  text-align: center;
 }
 
 </style>
