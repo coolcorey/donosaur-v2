@@ -35,25 +35,23 @@ export default {
       }
 
       for (var i = 0; i < window.years.length; i++) {
-        if (this.tax[window.years[i]] && this.tax[window.years[i]].length) {
-          // console.log(JSON.parse(JSON.stringify(this.tax[window.years[i]])))
-
-          taxDataArray.push({
-            year: window.years[i],
-            income: this.tax[window.years[i]].reduce((prev, next) => {
-              return prev + next.totrevenue || next.totrevnue || 0
-            }, 0),
-            asset: this.tax[window.years[i]].reduce((prev, next) => {
-              return prev + next.totassetsend || 0
-            }, 0),
-            liability: this.tax[window.years[i]].reduce((prev, next) => {
-              return prev + next.totliabend || 0
-            }, 0),
-            expense: this.tax[window.years[i]].reduce((prev, next) => {
-              return prev + next.totfuncexpns || 0
-            }, 0)
-          })
-        }
+        var year = window.years[i]
+        let yearDocs = (this.tax[year] || []).length ? this.tax[year] : []
+        taxDataArray.push({
+          year: year,
+          income: yearDocs.reduce((prev, next) => {
+            return prev + next.totrevenue || next.totrevnue || 0
+          }, 0),
+          asset: yearDocs.reduce((prev, next) => {
+            return prev + next.totassetsend || 0
+          }, 0),
+          liability: yearDocs.reduce((prev, next) => {
+            return prev + next.totliabend || 0
+          }, 0),
+          expense: yearDocs.reduce((prev, next) => {
+            return prev + next.totfuncexpns || 0
+          }, 0)
+        })
       }
 
       return taxDataArray

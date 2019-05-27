@@ -15,7 +15,7 @@ Vue.use(Meta)
 
 Vue.config.productionTip = false
 
-window.years = ['2012', '2013', '2014', '2015']
+window.years = ['2012', '2013', '2014', '2015', '2016', '2017']
 
 window.apiLocation = 'http://donosaur.org/api'
 // window.apiLocation = 'http://localhost:8090'

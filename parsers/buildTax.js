@@ -8,7 +8,7 @@ csv = require("fast-csv");
 //use donosaur
 //db.tax2015.createIndex({EIN:1})
 
-var year = "12";
+var year = "17";
 
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
@@ -42,7 +42,7 @@ var do990 = function(collection, db){
               csvStream.pause();
               collection.insertMany(allData, function(err, result) {
                 if(err){
-                  console.log(err);
+                  console.log('insertMany', err);
                 }
                 allData = [];
                 csvStream.resume();
@@ -52,6 +52,9 @@ var do990 = function(collection, db){
       .on("end", function(){
            console.log(type,count);
            collection.insertMany(allData, function(err, result) {
+             if(err){
+               console.log('insertMany', err);
+             }
              allData = [];
              do990EZ(collection, db);
            });
@@ -200,15 +203,19 @@ var do990PF = function(collection, db){
   */
 }
 
-var url = 'mongodb://localhost:27017/donosaur';
+var url = 'mongodb://localhost:27017';
 // Use connect method to connect to the Server
-MongoClient.connect(url, function(err, db) {
+const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
   if(err){
     console.log(err);
     return;
   }
-  console.log("Connected correctly to server");
+  console.log("Connected successfully to server");
+
+  const db = client.db('donosaur');
   var collection = db.collection('tax20' + year);
   do990(collection, db);
-
-})
+});

@@ -27,7 +27,7 @@ export default {
       let ret = []
       for (var i = 0; i < window.years.length; i++) {
         let year = window.years[i]
-        let yearDocs = this.tax[year] || this.tax[parseInt(year)]
+        let yearDocs = (this.tax[year] || []).length ? this.tax[year] : []
         ret.push({
           year: year,
           employees: 0,

@@ -49,7 +49,7 @@ export default {
       let ret = []
       for (var i = 0; i < window.years.length; i++) {
         let year = window.years[i]
-        let yearDocs = this.tax[year] || this.tax[parseInt(year)]
+        let yearDocs = (this.tax[year] || []).length ? this.tax[year] : []
         for (var j = 0; j < yearDocs.length; j++) {
           for (var k = 0; k < this.facts.length; k++) {
             if (yearDocs[j].hasOwnProperty(this.facts[k])) {
