@@ -43,36 +43,35 @@ export default {
       }
 
       for (var i = 0; i < window.years.length; i++) {
-        if (this.tax[window.years[i]] && this.tax[window.years[i]].length) {
-          // console.log(JSON.parse(JSON.stringify(this.tax[window.years[i]])))
-          taxDataArray[0].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.grsincmembers || 0
-          }, 0)
-          taxDataArray[1].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.grsincother || 0
-          }, 0)
-          taxDataArray[2].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.invstmntinc || 0
-          }, 0)
-          taxDataArray[3].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.netrntlinc || 0
-          }, 0)
-          taxDataArray[4].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.netincfndrsng || 0
-          }, 0)
-          taxDataArray[5].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.grsincgaming || 0
-          }, 0)
-          taxDataArray[6].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.netincsales || 0
-          }, 0)
-          taxDataArray[7].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.grsinc170 || next.grsinc509 || 0
-          }, 0)
-          taxDataArray[8].value += this.tax[window.years[i]].reduce((prev, next) => {
-            return prev + next.othrinc170 || next.othrinc509 || 0
-          }, 0)
-        }
+        let year = window.years[i]
+        let yearDocs = (this.tax[year] || []).length ? this.tax[year] : []
+        taxDataArray[0].value += yearDocs.reduce((prev, next) => {
+          return prev + next.grsincmembers || 0
+        }, 0)
+        taxDataArray[1].value += yearDocs.reduce((prev, next) => {
+          return prev + next.grsincother || 0
+        }, 0)
+        taxDataArray[2].value += yearDocs.reduce((prev, next) => {
+          return prev + next.invstmntinc || 0
+        }, 0)
+        taxDataArray[3].value += yearDocs.reduce((prev, next) => {
+          return prev + next.netrntlinc || 0
+        }, 0)
+        taxDataArray[4].value += yearDocs.reduce((prev, next) => {
+          return prev + next.netincfndrsng || 0
+        }, 0)
+        taxDataArray[5].value += yearDocs.reduce((prev, next) => {
+          return prev + next.grsincgaming || 0
+        }, 0)
+        taxDataArray[6].value += yearDocs.reduce((prev, next) => {
+          return prev + next.netincsales || 0
+        }, 0)
+        taxDataArray[7].value += yearDocs.reduce((prev, next) => {
+          return prev + next.grsinc170 || next.grsinc509 || 0
+        }, 0)
+        taxDataArray[8].value += yearDocs.reduce((prev, next) => {
+          return prev + next.othrinc170 || next.othrinc509 || 0
+        }, 0)
       }
       return taxDataArray
     }

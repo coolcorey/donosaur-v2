@@ -45,14 +45,19 @@ var labels = [
 var integers = ['ASSET_AMT', 'INCOME_AMT', 'REVENUE_AMT'];
 var results = [];
 
-var url = 'mongodb://localhost:27017/donosaur';
+var url = 'mongodb://localhost:27017';
 // Use connect method to connect to the Server
-MongoClient.connect(url, function(err, db) {
+const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
   if(err){
     console.log(err);
     return;
   }
-  console.log("Connected correctly to server");
+  console.log("Connected successfully to server");
+
+  const db = client.db('donosaur');
   var collection = db.collection('meta');
 
 /*
@@ -79,8 +84,8 @@ MongoClient.connect(url, function(err, db) {
 
 
   async.eachSeries([
-    //'../../data/eo1.csv',
-    //'../../data/eo2.csv',
+    '../../data/eo1.csv',
+    '../../data/eo2.csv',
     '../../data/eo3.csv',
     '../../data/eo4.csv'
   ], function(file, cb){
@@ -129,11 +134,7 @@ console.log(docs.length);
     console.log('done');
     db.close();
   })
-
 });
-
-
-
 
 /*
 fs = require('fs');
